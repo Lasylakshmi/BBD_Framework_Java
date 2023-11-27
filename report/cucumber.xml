@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="21.628">
+    <testcase classname="Login" name="Login with correct credentials" time="12.156">
+        <failure message="expected:&lt;[Gmail]&gt; but was:&lt;[Find a Flight: Mercury Tours:]&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given Browser is opened.....................................................passed
+When user is navigated to URL...............................................passed
+And user entered their username "Tester" and password "Test@123"............passed
+Then user successfully login into system....................................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<[Gmail]> but was:<[Find a Flight: Mercury Tours:]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at StepDefinitions.Steps.user_successfully_login_into_system(Steps.java:42)
+	at ✽.user successfully login into system(file:///C:/Users/Admin/Desktop/Automation_BDD/BDD/src/test/java/Resources/Login.feature:7)
+]]></failure>
+    </testcase>
+    <testcase classname="Login" name="Login with incorrect credentials" time="8.664">
+        <failure message="expected:&lt;[Gmail]&gt; but was:&lt;[Sign-on: Mercury Tours]&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given Browser is opened.....................................................passed
+When user is navigated to URL...............................................passed
+And user entered their username "mercury" and password "mercury1"...........passed
+Then user should not login into system......................................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<[Gmail]> but was:<[Sign-on: Mercury Tours]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at StepDefinitions.Steps.user_should_login_into_system(Steps.java:48)
+	at ✽.user should not login into system(file:///C:/Users/Admin/Desktop/Automation_BDD/BDD/src/test/java/Resources/Login.feature:13)
+]]></failure>
+    </testcase>
+</testsuite>
